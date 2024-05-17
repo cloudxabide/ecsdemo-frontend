@@ -21,7 +21,7 @@ spec:
         app: ecsdemo-frontend
     spec:
       containers:
-      - image: brentley/ecsdemo-frontend:latest
+      - image: cloudxabide/ecsdemo-frontend:latest
         imagePullPolicy: Always
         name: ecsdemo-frontend
         ports:
