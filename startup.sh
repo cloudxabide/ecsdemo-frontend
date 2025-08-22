@@ -12,36 +12,35 @@ SUBNET=$(echo ${IP} | cut -f1 -d.)
 NETWORK=$(echo ${IP} | cut -f3 -d.)
 
 case "${SUBNET}" in
-    10)
-        orchestrator=ecs
-        ;;
-    192)
-        orchestrator=kubernetes
-        ;;
-    *)
-        orchestrator=unknown
-        ;;
+  10)
+    orchestrator=ecs
+  ;;
+  192)
+    orchestrator=kubernetes
+  ;;
+  *)
+    orchestrator=unknown
+  ;;
 esac
 
-    case "${NETWORK}" in
-      100)
-        zone=a
-        color=Crimson
-        ;;
-      101)
-        zone=b
-        color=CornflowerBlue
-        ;;
-      102)
-        zone=c
-        color=LightGreen
-        ;;
-      *)
-        zone=unknown
-        color=Yellow
-        ;;
-    esac
-fi
+case "${NETWORK}" in
+  100)
+    zone=a
+    color=Crimson
+  ;;
+  101)
+    zone=b
+    color=CornflowerBlue
+  ;;
+  102)
+    zone=c
+    color=LightGreen
+  ;;
+  *)
+    zone=unknown
+    color=Yellow
+  ;;
+esac
 
 # Regardless of the number of AZ this "case statement" will categorize them in one of three "buckets"
 if [[ "${orchestrator}" == 'kubernetes' ]]; then
