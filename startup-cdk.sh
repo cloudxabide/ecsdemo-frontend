@@ -2,7 +2,7 @@
 
 set -x
 
-IP=$(ip route show |grep -o src.* |cut -f2 -d" ")
+IP=$(ip route show | grep -o src.* | cut -f2 -d" ")
 # kubernetes sets routes differently -- so we will discover our IP differently
 if [[ ${IP} == "" ]]; then
   IP=$(hostname -i)
