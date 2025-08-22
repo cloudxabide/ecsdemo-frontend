@@ -23,7 +23,6 @@ case "${SUBNET}" in
         ;;
 esac
 
-if [[ "${orchestrator}" == 'ecs' ]]; then
     case "${NETWORK}" in
       100)
         zone=a
