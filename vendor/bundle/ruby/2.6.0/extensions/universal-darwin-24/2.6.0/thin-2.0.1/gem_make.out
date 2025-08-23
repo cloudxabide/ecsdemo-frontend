@@ -1,0 +1,18 @@
+current directory: /Users/jradtke/Developer/Repositories/Personal/cloudxabide/ecsdemo-frontend/vendor/bundle/ruby/2.6.0/gems/thin-2.0.1/ext/thin_parser
+/System/Library/Frameworks/Ruby.framework/Versions/2.6/usr/bin/ruby -I /System/Library/Frameworks/Ruby.framework/Versions/2.6/usr/lib/ruby/2.6.0 -r ./siteconf20250823-25783-5x0gar.rb extconf.rb
+checking for main() in -lc... yes
+creating Makefile
+
+current directory: /Users/jradtke/Developer/Repositories/Personal/cloudxabide/ecsdemo-frontend/vendor/bundle/ruby/2.6.0/gems/thin-2.0.1/ext/thin_parser
+make "DESTDIR=" clean
+
+current directory: /Users/jradtke/Developer/Repositories/Personal/cloudxabide/ecsdemo-frontend/vendor/bundle/ruby/2.6.0/gems/thin-2.0.1/ext/thin_parser
+make "DESTDIR="
+compiling parser.c
+compiling thin.c
+linking shared-object thin_parser.bundle
+ld: warning: search path '/AppleInternal/Library/BuildRoots/4~B5FAugAunRW9OK7YcFNXDBTTVy6DXTYoxzE3ORQ/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.6.Internal.sdk/usr/local/lib' not found
+
+current directory: /Users/jradtke/Developer/Repositories/Personal/cloudxabide/ecsdemo-frontend/vendor/bundle/ruby/2.6.0/gems/thin-2.0.1/ext/thin_parser
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 thin_parser.bundle ./.gem.20250823-25783-15r7js2
