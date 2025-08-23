@@ -7,6 +7,12 @@ IP=$(ip route show | grep -o src.* | cut -f2 -d" ")
 if [[ ${IP} == "" ]]; then
   IP=$(hostname -i)
 fi
+
+# Fake it
+if [[ ${IP} == "" ]]; then
+  IP="10.42.$(shuf -e 1 2 3 -n1).$(shuf -e 11 12 13 -n1)"
+fi
+
 SUBNET=$(echo ${IP} | cut -f1 -d.)
 NETWORK=$(echo ${IP} | cut -f3 -d.)
 
@@ -78,6 +84,11 @@ fi
 # Still no luck? Perhaps we're running fargate!
 if [[ -z ${zone} ]]; then
   zone=$(curl -s ${ECS_CONTAINER_METADATA_URI_V4}/task | jq -r '.AvailabilityZone' | grep -o .$)
+fi
+
+# Still no luck? We'll fake it
+if [[ -z ${zone} ]]; then
+  zone=$(shuf -e a b c -n1)
 fi
 
 export CODE_HASH="$(cat code_hash.txt)"
