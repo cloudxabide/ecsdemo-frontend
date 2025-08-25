@@ -2,3 +2,11 @@
 cdk.context.*
 cdk.out
 .env
+
+# Ignore bundled gems
+/vendor/bundle/
+/vendor/cache/
+
+# Ignore other generated files
+/log/*.log
+/tmp/
