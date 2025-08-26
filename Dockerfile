@@ -1,11 +1,10 @@
-# FROM ruby:2.5-slim
-FROM public.ecr.aws/bitnami/ruby:2.5
+FROM public.ecr.aws/bitnami/ruby:3.3
 
 COPY Gemfile Gemfile.lock /usr/src/app/
 WORKDIR /usr/src/app
 
 RUN apt-get update && apt-get -y install iproute2 curl jq libgmp3-dev ruby-dev build-essential sqlite libsqlite3-dev python3 python3-pip && \
-    gem install bundler:1.17.3 && \
+    gem install bundler && \
     bundle install && \
     pip3 install awscli netaddr && \
     apt-get autoremove -y --purge && \

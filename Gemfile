@@ -1,18 +1,20 @@
 source 'https://rubygems.org'
 
+ruby '>= 2.7.0'
+
 gem 'thin'
 
-# Use Rails 5.2 for better security than 4.2 while maintaining compatibility
-gem 'rails', '~> 5.2.0'
+# Use Rails 7.2 for latest features and security updates
+gem 'rails', '~> 7.2.0'
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3', '~> 1.3.0'
+gem 'sqlite3', '~> 1.7.0'
 # Use SCSS for stylesheets  
-gem 'sass-rails', '~> 5.0'
-# Use Uglifier as compressor for JavaScript assets
-gem 'uglifier', '>= 1.3.0'
+gem 'sass-rails', '~> 6.0'
+# Use Terser as compressor for JavaScript assets
+gem 'terser'
 
 # Build JSON APIs with ease
-gem 'jbuilder', '~> 2.5'
+gem 'jbuilder', '~> 2.12'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
